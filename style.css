@@ -1,0 +1,31 @@
+ /* CSS для центрирования div и кнопки */  
+ body {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh; /* Занимаем полную высоту экрана */  
+    margin: 0; /* Убираем отступы */  
+}  
+
+.button {  
+    text-align: center; /* Центрируем текст внутри div */  
+}  
+
+button {  
+    padding: 10px 20px; /* Увеличиваем область для нажатия */  
+    font-size: 16px; /* Устанавливаем размер шрифта */  
+}  
+
+/* Новый класс для второй кнопки */  
+.new-button {  
+    background-color: red;  
+    border-radius: 5px; /* Закругленные углы */  
+}  
+.img {
+display: none;
+}
+.img2 {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
