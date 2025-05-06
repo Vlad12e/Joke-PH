@@ -9,17 +9,22 @@
 
 .button {  
     text-align: center; /* Центрируем текст внутри div */  
+    
 }  
 
 button {  
     padding: 10px 20px; /* Увеличиваем область для нажатия */  
     font-size: 16px; /* Устанавливаем размер шрифта */  
 }  
+#initialButton {
+    border-radius: 50px;
+}
 
 /* Новый класс для второй кнопки */  
 .new-button {  
     background-color: red;  
     border-radius: 5px; /* Закругленные углы */  
+    font-weight: 900;
 }  
 .img {
 display: none;

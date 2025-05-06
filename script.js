@@ -7,8 +7,15 @@ let audio4 = new Audio('sound/999-social-credit-siren.mp3'); // Замените
 let audio5 = new Audio('sound/goofy-ahh-car-horn-sound-effect.mp3'); // Замените на ваш URL аудиофайла  
 let audio6 = new Audio('sound/long-brain-fart.mp3'); // Замените на ваш URL аудиофайла  
 let audio7 = new Audio('sound/y2mate_5gbydy1.mp3'); // Замените на ваш URL аудиофайла  
+let audio8 = new Audio('sound/jg-032316-sfx-horror-style-impact-3.mp3'); // Замените на ваш URL аудиофайла
+let audio9 = new Audio('sound/the-hell_hZeqGOoV.mp3'); // Замените на ваш URL аудиофайла
+let audio10 = new Audio('sound/sonicexe-laugh-15980.mp3'); // Замените на ваш URL аудиофайла
+let audio11 = new Audio('sound/sonic-exe.mp3'); // Замените на ваш URL аудиофайла
+const timeout = 7500; // Задержка в миллисекундах перед выполнением действия
+const timeout1 = 5500; // Задержка в миллисекундах перед выполнением действия
 showFullScreenMessage();  
 showInstructions()
+
 
 
 audio.loop = true; // Установите зацикливание аудио  
@@ -18,19 +25,30 @@ audio4.loop = true; // Установите зацикливание аудио
 audio5.loop = true; // Установите зацикливание аудио  
 audio6.loop = true; // Установите зацикливание аудио  
 audio7.loop = true; // Установите зацикливание аудио  
+audio11.loop = true; // Установите зацикливание аудио
 
 function createButton() {  
     if (!buttonCreated) { // Проверяем, если кнопка уже создана  
         // Скрываем начальную кнопку  
+        audio8.play(); // Воспроизводим звук
         document.getElementById('initialButton').style.display = 'none';  
         document.body.style.backgroundColor = 'black';  
-
+``
         // Создаем новую кнопку  
         const newButton = document.createElement('button');  
         newButton.textContent = 'Я тебя предупредил'; // Текст на новой кнопке  
         newButton.className = 'new-button'; // Применяем новый класс к кнопке  
-        newButton.style.fontFamily = 'strong'; // Применяем шрифт strong к кнопке
         newButton.onclick = function () {  
+            newButton.style.display = "none" // Скрываем кнопку
+            audio9.play(); // Воспроизводим звук
+
+            setTimeout(() => {
+                // Задержка перед выполнением действия
+                audio10.play(); // Воспроизводим звук
+            }, timeout1); // Задержка перед выполнением действия
+
+            setTimeout(() => {
+             // Задержка перед выполнением действия
             newButton.style.display = "none"
             audio.play(); // Воспроизводим звук  
             audio2.play(); // Воспроизводим звук  
@@ -39,17 +57,16 @@ function createButton() {
             audio5.play(); // Воспроизводим звук  
             audio6.play(); // Воспроизводим звук  
             audio7.play(); // Воспроизводим звук  
+            audio11.play(); // Воспроизводим звук
             openRedirect(); // Вызываем функцию для перенаправления  
             image.classList.remove("img1")
             image.classList.toggle("img2")
+        }, timeout);
         };  
 
         document.body.appendChild(newButton); // Добавляем кнопку на страницу  
     }  
 }  
-
-
-
 function showInstructions() {  
     // Инструкции по включению всплывающих окон для Google Chrome  
     const instructionsText = `  
